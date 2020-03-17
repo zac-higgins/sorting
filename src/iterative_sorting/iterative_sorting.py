@@ -12,17 +12,18 @@ def selection_sort(arr):
             if arr[j] < arr[smallest_index]:
                 smallest_index = j
         # TO-DO: swap
-        temp_variable = arr[smallest_index]
-        arr[smallest_index] = arr[cur_index]
-        arr[cur_index] = temp_variable
+        arr[smallest_index], arr[cur_index] = arr[cur_index], arr[smallest_index]
 
     return arr
 
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
+    # set up a variable to check if the swap occurred
     swap_occurred = True
+    # loops through over again as long as a swap occurred
     while swap_occurred:
+        # sets false as a default so the while loop breaks if the condition below doesn't pass
         swap_occurred = False
         # Loop through the array
         for i in range(0, len(arr) - 1):
