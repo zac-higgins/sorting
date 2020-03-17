@@ -21,6 +21,16 @@ def selection_sort(arr):
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
+    swap_occurred = True
+    while swap_occurred:
+        swap_occurred = False
+        # Loop through the array
+        for i in range(0, len(arr) - 1):
+            # compare each element to its neighbor
+            if arr[i] > arr[i + 1]:
+                # if element is in wrong position(relative to neighbor), swap them
+                arr[i], arr[i + 1] = arr[i + 1], arr[i]
+                swap_occurred = True
 
     return arr
 
